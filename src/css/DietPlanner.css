@@ -1,0 +1,8 @@
+/* keep table in line even when empty */
+th, td {
+  width: 15%;
+}
+.search-results {
+  height: 40vh;
+  overflow-y: scroll;
+}
