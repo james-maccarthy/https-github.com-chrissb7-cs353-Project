@@ -1,8 +1,62 @@
-/* keep table in line even when empty */
-th, td {
-  width: 15%;
+.daySelector {
+    background-color: #466b6b;
+    width: 98%;
+    height: 6vh;
+    margin: 0.25vh 1%;
 }
-.search-results {
-  height: 40vh;
-  overflow-y: scroll;
+
+.boxes {
+    background-color: purple;
+    width: 80%;
+    margin: 0 10%;
+    height: 0;
+    transition: height 0.5s ease;
+    overflow: hidden;
+}
+
+.boxes-active {
+    background-color: purple;
+    width: 80%;
+    margin: 0 10%;
+    height: 43vh;
+    transition: height 0.5s ease;
+}
+
+.days {
+    float: left;
+    font-family: monospace;
+    font-size: 3vh;
+    font-weight: bold;
+    margin: 0 0 0 2%;
+    color: white;
+    line-height: 6vh;
+    width: 30%;
+    text-align: left;
+}
+.arrow{
+    float: right;
+    height: 100%;
+    width: auto;
+    transition: all 0.1s ease;
+}
+.arrow-active{
+    float: right;
+    height: 100%;
+    width: auto;
+    transform: rotate(90deg);
+    transition: all 0.1s ease;
+}
+
+.profile {
+    background-color: red;
+    width: 100%;
+    height: 50%;
+    margin: 0;
+}
+
+.tabs {
+    background-color: green;
+    width: 100%;
+    height: 50%;
+    margin: 0;
 }

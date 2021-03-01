@@ -12,7 +12,7 @@ class App extends Component {
         super(props);
         // set two state variable to handle user current page and sidebar toggle
         this.state = {
-            currentPageSelection: "DietPlanner",
+            currentPageSelection: "Weekly Plan",
             sidebar: false
         };
 
@@ -28,7 +28,7 @@ class App extends Component {
 
     // update state to display DietPlanner, hide side bar on button click
     DietPlannerButtonClick() {
-        this.setState({currentPageSelection: "DietPlanner"});
+        this.setState({currentPageSelection: "Weekly Plan"});
         this.setSideBar();
     }
 
@@ -52,8 +52,8 @@ class App extends Component {
                     </div>
                     {/* ? operator used to toggle the sliding sidebar, depending on state class changed */}
                     <ul className={this.state.sidebar ? "nav-links-active" : "nav-links"}>
-                        <li className={this.state.currentPageSelection === "DietPlanner" ? "active" : ""}
-                            onClick={this.DietPlannerButtonClick}>DietPlanner
+                        <li className={this.state.currentPageSelection === "Weekly Plan" ? "active" : ""}
+                            onClick={this.DietPlannerButtonClick}>Weekly Plan
                         </li>
                         <li className={this.state.currentPageSelection === "Menu" ? "active" : ""}
                             onClick={this.MenuPageClick}>Menu
@@ -63,7 +63,7 @@ class App extends Component {
 
 
                 {/* conditional rendering based on state, button handler functions change state and change view */}
-                {this.state.currentPageSelection === "DietPlanner" && <DietPlanner/>}
+                {this.state.currentPageSelection === "Weekly Plan" && <DietPlanner/>}
                 {this.state.currentPageSelection === "Menu" && <Menu/>}
 
                 {/*<footer><span>Team Nickel</span><span>CS385</span></footer>*/}
