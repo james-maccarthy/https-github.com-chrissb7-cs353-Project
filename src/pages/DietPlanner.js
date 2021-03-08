@@ -20,6 +20,7 @@ class DietPlanner extends Component {
         let newMenuStatus = [false, false, false, false, false, false, false];
         newMenuStatus[index] = !this.state.menuStatus[index];
         this.setState({menuStatus: newMenuStatus});
+        console.log(newMenuStatus);
     }
 
     tabClick(index) {
