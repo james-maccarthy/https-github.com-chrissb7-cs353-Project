@@ -103,3 +103,59 @@ footer {
 }
 
 /*end of nav bar styling*/
+
+/*style of login page*/
+#login {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #2f4f4f;
+}
+
+#login form {
+    position: relative;
+    width: 300px;
+    height: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#temp {
+    position: relative;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-20deg);
+    width: 80vw;
+}
+
+#login input {
+    height: 50px;
+    width: 280px;
+    border-radius: 30px;
+    border: 1px solid white;
+    margin-top: 30px;
+    padding: 0 3px;
+}
+
+#login button {
+    height: 40px;
+    width: 80px;
+    border-radius: 30px;
+    margin: 20px 10px 0 10px;
+    border: 1px solid white;
+    float: right;
+}
+
+#login button[type="submit"] {
+    width: 180px;
+    float: left;
+}
+
+#tip {
+    font-size: 10px;
+    color: #ff3f27;
+    margin: 0;
+    font-family: sans-serif;
+    display: none;
+}
