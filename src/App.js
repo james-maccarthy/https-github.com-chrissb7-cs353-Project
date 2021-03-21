@@ -98,7 +98,7 @@ class Main extends Component {
             case 0:
                 return <Profile/>;
             case 1:
-                return <DietPlanner/>;
+                return <DietPlanner setPage={this.setPage.bind(this)}/>;
             case 2:
                 return <Menu/>;
             default:
@@ -112,9 +112,13 @@ class Main extends Component {
         clicked.addClass("active");
         this.setState({
             currentPageIndex: clicked.index(),
-            currentPageSelection: clicked.text()
+            currentPageSelection: clicked.text(),
+            sidebar: false
         });
-        this.setSideBar();
+    }
+
+    setPage(index) {
+        $("#bar ul").children().eq(index).click();
     }
 
     render() {
