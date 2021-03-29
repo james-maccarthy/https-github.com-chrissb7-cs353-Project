@@ -1,20 +1,67 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 75vh;
-  font-size: 1.5rem;
+.menus {
+    background-color: #466b6b;
+    width: 98%;
+    height: 6vh;
+    margin: 0.25vh 1%;
 }
 
-.text {
-  text-align: center;
+.cuisine {
+    float: left;
+    font-family: monospace;
+    font-size: 3vh;
+    font-weight: bold;
+    margin: 0 0 0 2%;
+    color: white;
+    line-height: 6vh;
+    width: 30%;
+    text-align: left;
 }
-.list li {
-  text-decoration: none;
-  list-style: none;
+
+.arrow {
+    float: right;
+    height: 100%;
+    width: auto;
+    transition: all 0.1s ease;
+}
+
+.arrow-active {
+    float: right;
+    height: 100%;
+    width: auto;
+    transform: rotate(90deg);
+    transition: all 0.1s ease;
+}
+
+.boxes {
+    width: 80%;
+    margin: 0 10%;
+    transition: height 0.5s ease;
+    height: 0;
+    overflow: hidden;
+}
+
+.boxes-active {
+    width: 80%;
+    margin: 0 10%;
+    transition: height 0.5s ease;
+    /*make it auto*/
+    height: 43vh;
+    /*make it auto*/
+}
+
+#counter {
+    background-color: rgba(79, 129, 129, 0.9);
+    width: 90%;
+    height: 20vh;
+    margin: 5px auto;
+}
+
+#counter p {
+    color: white;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
 }
