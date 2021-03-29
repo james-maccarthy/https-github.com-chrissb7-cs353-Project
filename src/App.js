@@ -1,10 +1,11 @@
 import React, {Component} from "react";
-// import components
-// import LandingPage from "./views/LandingPage";
+import Firebase from "./pages/firebaseConfig";
 import $ from "jquery";
 import DietPlanner from "./pages/DietPlanner";
 import Menu from "./pages/Menu";
-import Profile from "./pages/Profile"
+import Profile from "./pages/Profile";
+import Login from "./pages/login";
+import Logout from "./pages/logout";
 // import stylesheets
 import './App.css';
 
@@ -12,71 +13,46 @@ import './App.css';
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {login: false};
+        this.state = { 
+        authenticated: false,
+        currentUser: null
+        }
+
     }
 
-    setLogin() {
-        this.setState({login: true});
-    }
+    componentDidMount() {
+        Firebase.auth().onAuthStateChanged((user) => {
+          user
+            ? this.setState(() => ({
+                authenticated: true,
+                currentUser: user
+              }))
+            : this.setState(() => ({
+                authenticated: false,
+                currentUser: null
+              }));
+        });
+      }
 
-    setLogout() {
-        this.setState({login: false});
-    }
 
     render() {
         return (
             <div className="App">
-                {this.state.login ? <Main setLogout={this.setLogout.bind(this)}/> :
-                    <Login setLogin={this.setLogin.bind(this)}/>}
+            
+             {/* {this.state.authenticated ? <Main/> :
+                    <Login/>} */}
+                    
+                    {this.state.authenticated && <Main/>}
+                    {!this.state.authenticated && <Login/>}
+                    {this.state.authenticated && <Logout />}
+
+
             </div>
         );
     }
 }
 
-class Login extends Component {
-    login() {
-        let username = $("#username").val();
-        let password = $("#password").val();
-        console.log("username: " + username + "\npassword: " + password);//for test
-        if (username !== "" && password !== "") {
-            //connect to database and check, now it has username test and password 123 for test
-            if (username === "test" && password === "123") {
-                $("#tip").hide();
-                this.props.setLogin();
-            } else {
-                $("#tip").show();
-            }
-        }
-    }
 
-    signUp() {
-        let username = $("#username").val();
-        let password = $("#password").val();
-        console.log("username: " + username + "\npassword: " + password);//for test
-        if (username !== "" && password !== "") {
-            //connect to database and register new user
-
-
-        }
-    }
-
-    render() {
-        return (
-            <div id="login">
-                <p id="temp">need a logo and App name</p>
-                <form onSubmit={function (e) {
-                    e.preventDefault();
-                }}>
-                    <input id="username" type="text" required="required" placeholder="Username"/>
-                    <input id="password" type="password" required="required" placeholder="Password"/>
-                    <p id="tip">Incorrect username or password</p>
-                    <button type="submit" onClick={this.login.bind(this)}>Sign in</button>
-                    <button type="button" onClick={this.signUp.bind(this)}>Sign up</button>
-                </form>
-            </div>
-        );
-    };
-}
 
 class Main extends Component {
     constructor(props) {
