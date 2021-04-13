@@ -5,6 +5,7 @@ import ValidationRunning from "./ValidationRunning";
 import ValidationRowing from "./ValidationRowing";
 import ValidationTeamSport from "./ValidationTeamSport";
 import ValidationGrams from "./ValidationGrams";
+import { basicFoodArray } from "./BasicFoodTypeJSON_Updated";
 
 class CalorieCounter extends Component {
   constructor(props) {
@@ -55,11 +56,7 @@ class CalorieCounter extends Component {
       isRowingActivityLevelHigh: false,
       activityArray: [],
       validActivity: "",
-      foodArray: [
-        ["carrots", 0, 40, 0],
-        ["cucumbers", 0, 50, 0],
-        ["burgers", 0, 60, 0]
-      ],
+      foodArray: basicFoodArray,
       validFood: false,
       validFood2: false,
       validNumber: false,
