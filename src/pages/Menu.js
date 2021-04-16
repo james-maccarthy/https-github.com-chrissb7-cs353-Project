@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import "../css/Menu.css";
+import "./Menu.css";
 import arrow from "../img/arrow.png";
 
 class Menu extends Component {

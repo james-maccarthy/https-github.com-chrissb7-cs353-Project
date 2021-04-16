@@ -2,7 +2,7 @@ import React, {Component} from "react";
 // import components
 
 // import stylesheets
-import "../css/DietPlanner.css";
+import "./DietPlanner.css";
 import arrow from "../img/arrow.png";
 import defaultPhoto from "../img/photo.jpg";
 

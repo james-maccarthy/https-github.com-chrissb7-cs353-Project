@@ -1,11 +1,11 @@
 import React, {Component} from "react";
-import Firebase from "./pages/firebaseConfig";
+import Firebase from "./components/databaseConfig/firebaseConfig";
 import $ from "jquery";
 import DietPlanner from "./pages/DietPlanner";
 import Menu from "./pages/Menu";
 import Profile from "./pages/Profile";
-import Login from "./pages/login";
-import Logout from "./pages/logout";
+import Login from "./components/login/login";
+import Logout from "./components/login/logout";
 // import stylesheets
 import './App.css';
 

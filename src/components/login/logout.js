@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Firebase from "./firebaseConfig";
+import Firebase from "../databaseConfig/firebaseConfig";
 
 class Logout extends Component {
   constructor(props) {

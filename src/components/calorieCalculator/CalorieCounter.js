@@ -5,7 +5,7 @@ import ValidationRunning from "./ValidationRunning";
 import ValidationRowing from "./ValidationRowing";
 import ValidationTeamSport from "./ValidationTeamSport";
 import ValidationGrams from "./ValidationGrams";
-import { basicFoodArray } from "./BasicFoodTypeJSON_Updated";
+import { basicFoodArray } from "../../jsonData/BasicFoodTypeJSON_Update.json";
 
 class CalorieCounter extends Component {
   constructor(props) {
