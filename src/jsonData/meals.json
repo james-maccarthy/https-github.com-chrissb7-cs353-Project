@@ -1,0 +1,35 @@
+{
+  "Chinese": {
+    "breakfast": [
+      {
+        "name": "pancake",
+        "calorie": "300 kcal",
+        "gram": "150 g"
+      },
+      {
+        "name": "name1",
+        "calorie": "0 kcal",
+        "gram": "0 g"
+      }
+    ],
+    "lunch": [
+      {
+        "name": "name2",
+        "calorie": "0 kcal",
+        "gram": "0 g"
+      }
+    ],
+    "dinner": [
+      {
+        "name": "name3",
+        "calorie": "0 kcal",
+        "gram": "0 g"
+      }
+    ]
+  },
+  "North American": {
+    "breakfast": [],
+    "lunch": [],
+    "dinner": []
+  }
+}
