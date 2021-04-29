@@ -1,3 +1,7 @@
+:root {
+    --box-height: 0;
+}
+
 .menus {
     background-color: #466b6b;
     width: 98%;
@@ -13,7 +17,7 @@
     margin: 0 0 0 2%;
     color: white;
     line-height: 6vh;
-    width: 30%;
+    width: 80%;
     text-align: left;
 }
 
@@ -33,19 +37,21 @@
 }
 
 .boxes {
-    width: 80%;
-    margin: 0 10%;
+    width: 90%;
+    margin: 0 5%;
     transition: height 0.5s ease;
+    /*-moz-transition: height 1s ease; -webkit-transition: height 1s ease; -o-transition: height 1s ease;*/
     height: 0;
     overflow: hidden;
 }
 
 .boxes-active {
-    width: 80%;
-    margin: 0 10%;
+    width: 90%;
+    margin: 0 5%;
     transition: height 0.5s ease;
+    /*-moz-transition: height 1s ease; -webkit-transition: height 1s ease; -o-transition: height 1s ease;*/
     /*make it auto*/
-    height: 43vh;
+    height: var(--box-height);
     /*make it auto*/
 }
 
@@ -64,4 +70,55 @@
     position: relative;
     top: 50%;
     transform: translate(0, -50%);
+}
+
+.mealTime {
+    border-bottom: 1px solid black;
+    width: 98%;
+    height: 4vh;
+    margin: 0.25vh 1%;
+    font-family: monospace;
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.meal {
+    width: 98%;
+    height: 4vh;
+    margin: 0.25vh 1%;
+}
+
+.meal p {
+    float: left;
+    font-family: monospace;
+    font-size: 2vh;
+    font-weight: bold;
+    margin: 0 0 0 2%;
+    line-height: 4vh;
+    width: 90%;
+    text-align: left;
+}
+
+.meal button {
+    float: right;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#daySelector {
+    width: 100px;
+    background-color: white;
+    border-top: 1px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-100%);
+    display: none;
+}
+
+#daySelector div {
+    height: 25px;
+    border: 1px solid black;
+    border-top: none;
 }
