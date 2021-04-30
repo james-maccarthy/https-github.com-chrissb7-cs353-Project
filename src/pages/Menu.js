@@ -25,13 +25,14 @@ class Menu extends Component {
 
     renderMeals(cuisineName) {
         var cuisine = meals[cuisineName];
-        var h = (cuisine.Breakfast.length + cuisine.Lunch.length + cuisine.Dinner.length + 3) * 4.3;
+        var h = (cuisine.Breakfast.length + cuisine.Lunch.length + cuisine.Dinner.length) * 8.3 + 3 * 4;
         $(":root").css("--box-height", h + "vh");
         return (<div>
             <div className="mealTime"><strong>Breakfast</strong></div>
             {cuisine.Breakfast.map((meal, index) => {
                 return <div key={index} className="meal">
                     <p>{meal.name}</p>
+                    <p>-{meal.calorie} {meal.gram}</p>
                     <button type="button" onClick={this.addButtonClick.bind(this)}>+</button>
                 </div>
             })}
@@ -39,6 +40,7 @@ class Menu extends Component {
             {cuisine.Lunch.map((meal, index) => {
                 return <div key={index} className="meal">
                     <p>{meal.name}</p>
+                    <p>-{meal.calorie} {meal.gram}</p>
                     <button type="button" onClick={this.addButtonClick.bind(this)}>+</button>
                 </div>
             })}
@@ -46,6 +48,7 @@ class Menu extends Component {
             {cuisine.Dinner.map((meal, index) => {
                 return <div key={index} className="meal">
                     <p>{meal.name}</p>
+                    <p>-{meal.calorie} {meal.gram}</p>
                     <button type="button" onClick={this.addButtonClick.bind(this)}>+</button>
                 </div>
             })}

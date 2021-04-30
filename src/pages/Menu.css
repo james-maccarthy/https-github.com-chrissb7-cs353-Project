@@ -40,7 +40,6 @@
     width: 90%;
     margin: 0 5%;
     transition: height 0.5s ease;
-    /*-moz-transition: height 1s ease; -webkit-transition: height 1s ease; -o-transition: height 1s ease;*/
     height: 0;
     overflow: hidden;
 }
@@ -49,7 +48,6 @@
     width: 90%;
     margin: 0 5%;
     transition: height 0.5s ease;
-    /*-moz-transition: height 1s ease; -webkit-transition: height 1s ease; -o-transition: height 1s ease;*/
     /*make it auto*/
     height: var(--box-height);
     /*make it auto*/
@@ -84,7 +82,7 @@
 
 .meal {
     width: 98%;
-    height: 4vh;
+    height: 8vh;
     margin: 0.25vh 1%;
 }
 
@@ -98,11 +96,14 @@
     width: 90%;
     text-align: left;
 }
+.meal p:last-of-type {
+    padding-left: 10px;
+    width: 70%;
+}
 
 .meal button {
     float: right;
     position: relative;
-    top: 50%;
     transform: translateY(-50%);
 }
 
