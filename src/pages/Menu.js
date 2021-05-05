@@ -3,13 +3,15 @@ import "./Menu.css";
 import arrow from "../img/arrow.png";
 import meals from "../jsonData/FoodMenu.json";
 import $ from "jquery";
+import firebase from "firebase/app";
+import userSelected from "../jsonData/localData.json";
 
 class Menu extends Component {
     constructor(props) {
         super(props);
         // set two state variable to handle user current page and sidebar toggle
         this.state = {
-            menuStatus: [false, false, false, false, false, false, false],
+            menuStatus: [false, false, false],
             mealSelected: null
         };
         $("body").click(function () {
@@ -18,21 +20,30 @@ class Menu extends Component {
     }
 
     menuClick(index) {
-        let newMenuStatus = [false, false, false, false, false, false, false];
+        let newMenuStatus = [false, false, false];
         newMenuStatus[index] = !this.state.menuStatus[index];
         this.setState({menuStatus: newMenuStatus});
+        var cuisineName;
+        if(index===0){
+            cuisineName = "Europe";
+        }else if(index===1){
+            cuisineName = "North America";
+        }else if(index===2){
+            cuisineName = "Asia";
+        }
+        var cuisine = meals[cuisineName];
+        var h = (cuisine.Breakfast.length + cuisine.Lunch.length + cuisine.Dinner.length) * 8.3 + 3 * 4;
+        $(":root").css("--box-height", h + "vh");
     }
 
     renderMeals(cuisineName) {
         var cuisine = meals[cuisineName];
-        var h = (cuisine.Breakfast.length + cuisine.Lunch.length + cuisine.Dinner.length) * 8.3 + 3 * 4;
-        $(":root").css("--box-height", h + "vh");
         return (<div>
             <div className="mealTime"><strong>Breakfast</strong></div>
             {cuisine.Breakfast.map((meal, index) => {
                 return <div key={index} className="meal">
                     <p>{meal.name}</p>
-                    <p>-{meal.calorie} {meal.gram}</p>
+                    <p><span className="calorie">{meal.calorie}</span> <span className="gram">{meal.gram}</span></p>
                     <button type="button" onClick={this.addButtonClick.bind(this)}>+</button>
                 </div>
             })}
@@ -40,7 +51,7 @@ class Menu extends Component {
             {cuisine.Lunch.map((meal, index) => {
                 return <div key={index} className="meal">
                     <p>{meal.name}</p>
-                    <p>-{meal.calorie} {meal.gram}</p>
+                    <p><span className="calorie">{meal.calorie}</span> <span className="gram">{meal.gram}</span></p>
                     <button type="button" onClick={this.addButtonClick.bind(this)}>+</button>
                 </div>
             })}
@@ -48,7 +59,7 @@ class Menu extends Component {
             {cuisine.Dinner.map((meal, index) => {
                 return <div key={index} className="meal">
                     <p>{meal.name}</p>
-                    <p>-{meal.calorie} {meal.gram}</p>
+                    <p><span className="calorie">{meal.calorie}</span> <span className="gram">{meal.gram}</span></p>
                     <button type="button" onClick={this.addButtonClick.bind(this)}>+</button>
                 </div>
             })}
@@ -57,7 +68,14 @@ class Menu extends Component {
 
     addButtonClick(event) {
         event.stopPropagation();
-        this.setState({mealSelected: $(event.target).parent().find("p").text()});
+        var mealEntry = $(event.target).parent();
+        this.setState({
+            mealSelected: {
+                name: mealEntry.find("p").eq(0).text(),
+                calorie: mealEntry.find("p").eq(1).find("span").eq(0).text(),
+                gram: mealEntry.find("p").eq(1).find("span").eq(1).text()
+            }
+        });
         $("#daySelector").css({
             "top": event.target.offsetTop - 1 - event.target.offsetHeight / 2 + "px",
             "left": event.target.offsetLeft + event.target.offsetWidth + "px"
@@ -65,9 +83,12 @@ class Menu extends Component {
     }
 
     mealSelector(event) {
+        var uid = firebase.auth().currentUser.uid;
         var day = $(event.target).text();
         var meal = this.state.mealSelected;
-        console.log(meal + " add into " + day);
+        userSelected.push({uid: uid, day: day, meal: meal});
+        console.log(meal);
+        console.log(uid);
     }
 
     render() {

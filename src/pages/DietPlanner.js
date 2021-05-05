@@ -6,6 +6,8 @@ import "./DietPlanner.css";
 import arrow from "../img/arrow.png";
 import defaultPhoto from "../img/photo.jpg";
 
+import userSelected from "../jsonData/localData.json";
+
 class DietPlanner extends Component {
     constructor(props) {
         super(props);
@@ -27,6 +29,13 @@ class DietPlanner extends Component {
         let newTabStatus = [false, false, false];
         newTabStatus[index] = true;
         this.setState({tabStatus: newTabStatus});
+    }
+
+    renderMeals(){
+        console.log(userSelected);
+        return (<div>
+
+        </div>);
     }
 
 
@@ -62,7 +71,7 @@ class DietPlanner extends Component {
                         <tr>
                             <td colSpan="3">
                                 <div className={this.state.tabStatus[0] ? "tabDiv" : "hide"}>
-                                    Goals
+                                    Goals{this.renderMeals()}
                                 </div>
                                 <div className={this.state.tabStatus[1] ? "tabDiv" : "hide"}>
                                     Nutrition
