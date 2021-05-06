@@ -6,6 +6,7 @@ import $ from "jquery";
 import firebase from "firebase/app";
 import userSelected from "../jsonData/localData.json";
 
+
 class Menu extends Component {
     constructor(props) {
         super(props);
@@ -76,6 +77,7 @@ class Menu extends Component {
                 gram: mealEntry.find("p").eq(1).find("span").eq(1).text()
             }
         });
+        
         $("#daySelector").css({
             "top": event.target.offsetTop - 1 - event.target.offsetHeight / 2 + "px",
             "left": event.target.offsetLeft + event.target.offsetWidth + "px"
