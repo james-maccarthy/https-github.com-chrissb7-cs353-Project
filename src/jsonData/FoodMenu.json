@@ -3,66 +3,66 @@
     "Dinner": [
       {
         "name": "Carmelised Squash & SPinach Lasagna",
-        "calorie": "840 kcal",
+        "calorie": "840",
         "gram": "100 g"
       },
       {
         "name": "Courgetti Bolognese",
-        "calorie": "326 kcal",
+        "calorie": "326",
         "gram": "100 g"
       },
       {
         "name": "Healthy Pizza",
-        "calorie": "479 kcal",
+        "calorie": "479",
         "gram": "100 g"
       },
       {
         "name": "Healthier Pasta Carbonara",
-        "calorie": "552 kcal",
+        "calorie": "552",
         "gram": "100 g"
       }
     ],
     "Lunch": [
       {
         "name": "Spiced Tortilla",
-        "calorie": "327 kcal",
+        "calorie": "327",
         "gram": "serving"
       },
       {
         "name": "Roast Cod With Paella",
-        "calorie": "660 kcal",
+        "calorie": "660",
         "gram": "serving"
       },
       {
         "name": "Clam Chorizo and White Bean Stew",
-        "calorie": "285 kcal",
+        "calorie": "285",
         "gram": "serving"
       },
       {
         "name": "Frecch Onion Soup",
-        "calorie": "618 kcal",
+        "calorie": "618",
         "gram": "serving"
       }
     ],
     "Breakfast": [
       {
         "name": "Healthy Full Irish",
-        "calorie": "370 kcal",
+        "calorie": "370",
         "gram": "serving"
       },
       {
         "name": "Healthy Pancakes",
-        "calorie": "53 kcal",
+        "calorie": "53",
         "gram": "serving"
       },
       {
         "name": "2 Minute Breakfast Smoothie",
-        "calorie": "156 kcal",
+        "calorie": "156",
         "gram": "serving"
       },
       {
         "name": "Kefir Breakfast Smoothies",
-        "calorie": "201 kcal",
+        "calorie": "201",
         "gram": "serving"
       }
     ]
@@ -71,34 +71,34 @@
     "Dinner": [
       {
         "name": "Vegan Chilli",
-        "calorie": "300 kcal",
+        "calorie": "300",
         "gram": "serving"
       },
       {
         "name": "Two-tray Thanksgiving Dinner",
-        "calorie": "760 kcal",
+        "calorie": "760",
         "gram": "serving"
       },
       {
         "name": "Chicken & Bean Enchiladas",
-        "calorie": "484 kcal",
+        "calorie": "484",
         "gram": "serving"
       },
       {
         "name": "All-American T-bone",
-        "calorie": "808 kcal",
+        "calorie": "808",
         "gram": "serving"
       }
     ],
     "Lunch": [
       {
         "name": "Healthy Huevos Rancheros",
-        "calorie": "540 kcal",
+        "calorie": "540",
         "gram": "serving"
       },
       {
         "name": "Healthy Coleslaw",
-        "calorie": "151 kcal",
+        "calorie": "151",
         "gram": "serving"
       },
       {
@@ -108,29 +108,29 @@
       },
       {
         "name": "Southern-fried Prawns",
-        "calorie": "243 kcal",
+        "calorie": "243",
         "gram": "serving"
       }
     ],
     "Breakfast": [
       {
         "name": "Mexican Veggie Hash",
-        "calorie": "671 kcal",
+        "calorie": "671",
         "gram": "serving"
       },
       {
         "name": "Sweetcorn Cakes with Poached Eggs",
-        "calorie": "636 kcal",
+        "calorie": "636",
         "gram": "serving"
       },
       {
         "name": "American Pancakes",
-        "calorie": "356 kcal",
+        "calorie": "356",
         "gram": "serving"
       },
       {
         "name": "Breakfast Bagel Recipe",
-        "calorie": "681 kcal",
+        "calorie": "681",
         "gram": "serving"
       }
     ]
@@ -139,22 +139,22 @@
     "Dinner": [
       {
         "name": "Tikka Masala",
-        "calorie": "365 kcal",
+        "calorie": "365",
         "gram": "serving"
       },
       {
         "name": "Chinese Chicken Noodle Soup",
-        "calorie": "434 kcal",
+        "calorie": "434",
         "gram": "serving"
       },
       {
         "name": "Cantonese Char Siu",
-        "calorie": "412 kcal",
+        "calorie": "412",
         "gram": "serving"
       },
       {
         "name": "Japanese Ramen Noodle Soup",
-        "calorie": "629 kcal",
+        "calorie": "629",
         "gram": "serving"
       }
     ],
@@ -166,39 +166,39 @@
       },
       {
         "name": "Healthy Tabbouleh",
-        "calorie": "269 kcal",
+        "calorie": "269",
         "gram": "serving"
       },
       {
         "name": "Healthy Couscous",
-        "calorie": "246 kcal",
+        "calorie": "246",
         "gram": "serving"
       },
       {
         "name": "Healthy Roti",
-        "calorie": "121 kcal",
+        "calorie": "121",
         "gram": "serving"
       }
     ],
     "Breakfast": [
       {
         "name": "Indian Rice Pudding",
-        "calorie": "414 kcal",
+        "calorie": "414",
         "gram": "serving"
       },
       {
         "name": "Akoori (Indian scrambled eggs)",
-        "calorie": "186 kcal",
+        "calorie": "186",
         "gram": "serving"
       },
       {
         "name": "Indian Potato Pancakes",
-        "calorie": "490 kcal",
+        "calorie": "490",
         "gram": "serving"
       },
       {
         "name": "Bhaji Frittata",
-        "calorie": "282 kcal",
+        "calorie": "282",
         "gram": "serving"
       }
     ]
