@@ -9,6 +9,7 @@ class Login extends Component {
         this.state = {
             email: "",
             password: "",
+    
             error: null
         };
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -41,17 +42,20 @@ class Login extends Component {
 
     handleSignUpSubmit(event) {
         event.preventDefault(); //stop default behaviour and allow our error checking
-        $("#tip").hide();
-        if ($("#signUp input:nth-child(2)").val() !== $("#signUp input:nth-child(3)").val()) {
-            $("#tip").show();
-        } else {
-            console.log("Email: " + $("#signUp input:nth-child(1)").val());
-            console.log("Password: " + $("#signUp input:nth-child(2)").val());
-            //need to connect database
-            //......................
-
+        const {email, password} = this.state;
+        Firebase.auth()
+        .createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            // once successfully authenticated set state in the Parent
+            // for the authenticated variable.
+            console.log("User logged on");
+        })
+        .catch((error) => {
+            //if error occurs, push to error state
+            this.setState({error: error});
+        });     
             $("#signUp").hide();
-        }
+        
     }
 
     showSignUp() {
@@ -83,8 +87,11 @@ class Login extends Component {
                 </div>
                 <div id="signUp">
                     <form onSubmit={this.handleSignUpSubmit}>
-                        <input name="email" type="email" required="required" placeholder="Email"/>
-                        <input name="password" type="password" required="required" placeholder="Password"/>
+                        <input name="email" type="email" required="required" placeholder="Email" value={email}
+                        onChange={handleInput}/>
+                        <input name="password" type="password" required="required" placeholder="Password"
+                        value={password}
+                        onChange={handleInput}/>
                         <input name="confirm" type="password" required="required" placeholder="Confirm Password"/>
                         <p id="tip"><strong>password in two field must be same!</strong></p>
                         <button type="submit">submit</button>
