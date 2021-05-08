@@ -364,7 +364,7 @@ class Profile extends Component {
                         </td>
                         <td>
                         <div className={this.state.tabStatus[2] ? "tabOn" : ""}
-                            onClick={this.tabClick.bind(this, 2)}>Most Eaten
+                            onClick={this.tabClick.bind(this, 2)}>Exercise
                         </div>
                         </td>
                     </tr>
@@ -505,7 +505,11 @@ class Profile extends Component {
     </body> 
     </div>
     
-    <div className={this.state.tabStatus[2] ? "tabDiv" : "hide"}> Activity Breakdown</div>
+    <div className={this.state.tabStatus[2] ? "tabDiv" : "hide"}> 
+    
+            {/* ENTER EXERCISE COMPONENT HERE */}
+    
+    </div>
     </td>
     </tr>
     </tbody>
