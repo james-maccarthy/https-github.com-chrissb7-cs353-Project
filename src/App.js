@@ -5,7 +5,6 @@ import DietPlanner from "./pages/DietPlanner";
 import Menu from "./pages/Menu";
 import Profile from "./pages/Profile";
 import Login from "./components/login/login";
-import Logout from "./components/login/logout";
 // import stylesheets
 import './App.css';
 
@@ -44,7 +43,7 @@ class App extends Component {
                     
                     {this.state.authenticated && <Main/>}
                     {!this.state.authenticated && <Login/>}
-                    {this.state.authenticated && <Logout />}
+                    {/*{this.state.authenticated && <Logout />}*/}
 
 
             </div>
@@ -65,6 +64,11 @@ class Main extends Component {
         };
     }
 
+    logOutUser() {
+        // Make a call to firebase authentication
+        // this API will log the user out now.
+        Firebase.auth().signOut();
+    }
     setSideBar() {
         this.setState({sidebar: !this.state.sidebar});
     }
@@ -113,7 +117,7 @@ class Main extends Component {
                         <li onClick={this.sideMenuClick.bind(this)} className="active">Profile</li>
                         <li onClick={this.sideMenuClick.bind(this)}>Weekly Plan</li>
                         <li onClick={this.sideMenuClick.bind(this)}>Menu</li>
-                        <li onClick={this.props.setLogout}>Sign out</li>
+                        <li onClick={this.logOutUser.bind(this)}>Sign out</li>
                     </ul>
                 </nav>
                 {this.pageRouter(this.state.currentPageIndex)}

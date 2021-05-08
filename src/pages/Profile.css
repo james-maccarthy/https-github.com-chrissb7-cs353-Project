@@ -1,0 +1,32 @@
+.tabOn {
+    background-color: #2f4f4f !important;
+}
+
+.tabDiv {
+    height: 100%;
+    border: darkslategrey solid 0.4vw;
+    padding-bottom: 5px;
+}
+
+.hide {
+    display: none;
+}
+
+.tabs {
+    position: relative;
+    top: 2.5%;
+    border-spacing: 0;
+    /*height: 95%;*/
+    width: 98%;
+    table-layout: fixed;
+    margin: 1vw;
+}
+
+.tabs thead{
+    line-height: 5vh;
+}
+
+.tabs thead div {
+    background-color: rgba(79, 129, 129, 0.9);
+    color: white;
+}
