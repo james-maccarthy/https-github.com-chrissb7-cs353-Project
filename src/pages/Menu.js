@@ -13,7 +13,8 @@ class Menu extends Component {
         // set two state variable to handle user current page and sidebar toggle
         this.state = {
             menuStatus: [false, false, false],
-            mealSelected: null
+            mealSelected: null,
+            mealTimeSelected: null
         };
         $("body").click(function () {
             $("#daySelector").hide();
@@ -25,11 +26,11 @@ class Menu extends Component {
         newMenuStatus[index] = !this.state.menuStatus[index];
         this.setState({menuStatus: newMenuStatus});
         var cuisineName;
-        if(index===0){
+        if (index === 0) {
             cuisineName = "Europe";
-        }else if(index===1){
+        } else if (index === 1) {
             cuisineName = "North America";
-        }else if(index===2){
+        } else if (index === 2) {
             cuisineName = "Asia";
         }
         var cuisine = meals[cuisineName];
@@ -42,7 +43,7 @@ class Menu extends Component {
         return (<div>
             <div className="mealTime"><strong>Breakfast</strong></div>
             {cuisine.Breakfast.map((meal, index) => {
-                return <div key={index} className="meal">
+                return <div key={index} className="meal" name="Breakfast">
                     <p>{meal.name}</p>
                     <p><span className="calorie">{meal.calorie}</span> <span className="gram">{meal.gram}</span></p>
                     <button type="button" onClick={this.addButtonClick.bind(this)}>+</button>
@@ -50,7 +51,7 @@ class Menu extends Component {
             })}
             <div className="mealTime"><strong>Lunch</strong></div>
             {cuisine.Lunch.map((meal, index) => {
-                return <div key={index} className="meal">
+                return <div key={index} className="meal" name="Lunch">
                     <p>{meal.name}</p>
                     <p><span className="calorie">{meal.calorie}</span> <span className="gram">{meal.gram}</span></p>
                     <button type="button" onClick={this.addButtonClick.bind(this)}>+</button>
@@ -58,7 +59,7 @@ class Menu extends Component {
             })}
             <div className="mealTime"><strong>Dinner</strong></div>
             {cuisine.Dinner.map((meal, index) => {
-                return <div key={index} className="meal">
+                return <div key={index} className="meal" name="Dinner">
                     <p>{meal.name}</p>
                     <p><span className="calorie">{meal.calorie}</span> <span className="gram">{meal.gram}</span></p>
                     <button type="button" onClick={this.addButtonClick.bind(this)}>+</button>
@@ -75,9 +76,10 @@ class Menu extends Component {
                 name: mealEntry.find("p").eq(0).text(),
                 calorie: mealEntry.find("p").eq(1).find("span").eq(0).text(),
                 gram: mealEntry.find("p").eq(1).find("span").eq(1).text()
-            }
+            },
+            mealTimeSelected: mealEntry.attr("name")
         });
-        
+
         $("#daySelector").css({
             "top": event.target.offsetTop - 1 - event.target.offsetHeight / 2 + "px",
             "left": event.target.offsetLeft + event.target.offsetWidth + "px"
@@ -88,9 +90,8 @@ class Menu extends Component {
         var uid = firebase.auth().currentUser.uid;
         var day = $(event.target).text();
         var meal = this.state.mealSelected;
-        userSelected.push({uid: uid, day: day, meal: meal});
-        console.log(meal);
-        console.log(uid);
+        var mealTime = this.state.mealTimeSelected;
+        userSelected.push({uid: uid, day: day, mealTime: mealTime, meal: meal});
     }
 
     render() {
