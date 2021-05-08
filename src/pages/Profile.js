@@ -28,7 +28,7 @@ class Profile extends Component {
             formErrorsIdealWeight: {idealWeight: ""},
             idealWeightValid: false,
             formValidIdealWeight: false,
-            isIdealWeightSubmitted: false
+            isIdealWeightSubmitted: false,
 
 
         };
@@ -245,8 +245,7 @@ class Profile extends Component {
         let totalCal = newdata.reduce((acc, cals) => {
             return acc + cals
         }, 0);
-        // this.state.caloriesUser = totalCal;  //Calories from user Data
-        this.setState({caloriesUser:totalCal});
+        this.state.caloriesUser = totalCal;  //Calories from user Data
         let avgCals = Math.round(totalCal / 7);
         if (this.state.caloriesUser.length === 0) {
             return (
@@ -275,8 +274,7 @@ class Profile extends Component {
         let totalCal = newdata.reduce((acc, cals) => {
             return acc + cals
         }, 0);
-        // this.state.caloriesUser = totalCal;
-        this.setState({caloriesUser:totalCal});
+        this.state.caloriesUser = totalCal;
         let avgCals = (totalCal / 7);
         let avgCalsDaily = this.state.caloriesPerDay;
 
