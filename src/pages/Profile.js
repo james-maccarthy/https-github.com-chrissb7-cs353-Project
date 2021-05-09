@@ -124,60 +124,26 @@ class Profile extends Component {
       activityArray: []
     };
 
-    // many functions need to be bound
+    ////////THE EXERCISE SECTION BINDED FUNCTIONS/////////////
 
-    this.handleCyclingActivityLevelLowClick = this.handleCyclingActivityLevelLowClick.bind(
-      this
-    );
-    this.handleCyclingActivityLevelModerateClick = this.handleCyclingActivityLevelModerateClick.bind(
-      this
-    );
-    this.handleCyclingActivityLevelHighClick = this.handleCyclingActivityLevelHighClick.bind(
-      this
-    );
-    this.handleWalkingActivityLevelLowClick = this.handleWalkingActivityLevelLowClick.bind(
-      this
-    );
-    this.handleWalkingActivityLevelModerateClick = this.handleWalkingActivityLevelModerateClick.bind(
-      this
-    );
-    this.handleWalkingActivityLevelHighClick = this.handleWalkingActivityLevelHighClick.bind(
-      this
-    );
-    this.handleRunningActivityLevelLowClick = this.handleRunningActivityLevelLowClick.bind(
-      this
-    );
-    this.handleRunningActivityLevelModerateClick = this.handleRunningActivityLevelModerateClick.bind(
-      this
-    );
-    this.handleRunningActivityLevelHighClick = this.handleRunningActivityLevelHighClick.bind(
-      this
-    );
-    this.handleRowingActivityLevelLowClick = this.handleRowingActivityLevelLowClick.bind(
-      this
-    );
-    this.handleRowingActivityLevelModerateClick = this.handleRowingActivityLevelModerateClick.bind(
-      this
-    );
-    this.handleRowingActivityLevelHighClick = this.handleRowingActivityLevelHighClick.bind(
-      this
-    );
-    this.handleChangeCyclingTimeBox = this.handleChangeCyclingTimeBox.bind(
-      this
-    );
-    this.handleChangeWalkingTimeBox = this.handleChangeWalkingTimeBox.bind(
-      this
-    );
-    this.handleChangeRunningTimeBox = this.handleChangeRunningTimeBox.bind(
-      this
-    );
+    this.handleCyclingActivityLevelLowClick = this.handleCyclingActivityLevelLowClick.bind(this);
+    this.handleCyclingActivityLevelModerateClick = this.handleCyclingActivityLevelModerateClick.bind(this);
+    this.handleCyclingActivityLevelHighClick = this.handleCyclingActivityLevelHighClick.bind(this);
+    this.handleWalkingActivityLevelLowClick = this.handleWalkingActivityLevelLowClick.bind(this);
+    this.handleWalkingActivityLevelModerateClick = this.handleWalkingActivityLevelModerateClick.bind(this);
+    this.handleWalkingActivityLevelHighClick = this.handleWalkingActivityLevelHighClick.bind(this);
+    this.handleRunningActivityLevelLowClick = this.handleRunningActivityLevelLowClick.bind(this);
+    this.handleRunningActivityLevelModerateClick = this.handleRunningActivityLevelModerateClick.bind(this);
+    this.handleRunningActivityLevelHighClick = this.handleRunningActivityLevelHighClick.bind(this);
+    this.handleRowingActivityLevelLowClick = this.handleRowingActivityLevelLowClick.bind(this);
+    this.handleRowingActivityLevelModerateClick = this.handleRowingActivityLevelModerateClick.bind(this);
+    this.handleRowingActivityLevelHighClick = this.handleRowingActivityLevelHighClick.bind(this);
+    this.handleChangeCyclingTimeBox = this.handleChangeCyclingTimeBox.bind(this);
+    this.handleChangeWalkingTimeBox = this.handleChangeWalkingTimeBox.bind(this);
+    this.handleChangeRunningTimeBox = this.handleChangeRunningTimeBox.bind(this);
     this.handleChangeRowingTimeBox = this.handleChangeRowingTimeBox.bind(this);
-    this.handleChangeTeamSportTimeBox = this.handleChangeTeamSportTimeBox.bind(
-      this
-    );
-    this.handleChangeWeightLiftingTimeBox = this.handleChangeWeightLiftingTimeBox.bind(
-      this
-    );
+    this.handleChangeTeamSportTimeBox = this.handleChangeTeamSportTimeBox.bind(this);
+    this.handleChangeWeightLiftingTimeBox = this.handleChangeWeightLiftingTimeBox.bind(this);
     this.submitMinutesCyclingClick = this.submitMinutesCyclingClick.bind(this);
     this.validateMinutesCycling = this.validateMinutesCycling.bind(this);
     this.submitMinutesWalkingClick = this.submitMinutesWalkingClick.bind(this);
@@ -186,34 +152,25 @@ class Profile extends Component {
     this.validateMinutesRunning = this.validateMinutesRunning.bind(this);
     this.submitMinutesRowingClick = this.submitMinutesRowingClick.bind(this);
     this.validateMinutesRowing = this.validateMinutesRowing.bind(this);
-    this.submitMinutesTeamSportClick = this.submitMinutesTeamSportClick.bind(
-      this
-    );
+    this.submitMinutesTeamSportClick = this.submitMinutesTeamSportClick.bind(this);
     this.validateMinutesTeamSport = this.validateMinutesTeamSport.bind(this);
-    this.submitMinutesWeightLiftingClick = this.submitMinutesWeightLiftingClick.bind(
-      this
-    );
-    this.validateMinutesWeightLifting = this.validateMinutesWeightLifting.bind(
-      this
-    );
+    this.submitMinutesWeightLiftingClick = this.submitMinutesWeightLiftingClick.bind(this);
+    this.validateMinutesWeightLifting = this.validateMinutesWeightLifting.bind(this);
 
+    ////////THE GOAL SECTION BINDED FUNCTIONS/////////////
     this.onDeleteFormChange = this.onDeleteFormChange.bind(this);
     this.deleteActivityType = this.deleteActivityType.bind(this);
-    this.handleChangeCaloriesPerDayBox = this.handleChangeCaloriesPerDayBox.bind(
-      this
-    );
+    this.handleChangeCaloriesPerDayBox = this.handleChangeCaloriesPerDayBox.bind(this);
     this.validateCaloriesPerDay = this.validateCaloriesPerDay.bind(this);
     this.submitCaloriesPerDayClick = this.submitCaloriesPerDayClick.bind(this);
-    this.handleChangeCurrentWeightBox = this.handleChangeCurrentWeightBox.bind(
-      this
-    );
+    this.handleChangeCurrentWeightBox = this.handleChangeCurrentWeightBox.bind(this);
     this.validateCurrentWeight = this.validateCurrentWeight.bind(this);
     this.submitCurrentWeightClick = this.submitCurrentWeightClick.bind(this);
-    this.handleChangeIdealWeightBox = this.handleChangeIdealWeightBox.bind(
-      this
-    );
+    this.handleChangeIdealWeightBox = this.handleChangeIdealWeightBox.bind(this);
     this.validateIdealWeight = this.validateIdealWeight.bind(this);
     this.submitIdealWeightClick = this.submitIdealWeightClick.bind(this);
+    
+    
     ////////THE BREAKDOWN SECTION BINDED FUNCTIONS/////////////
     this.weightLossGoal = this.weightLossGoal.bind(this);
     this.WeightCalculation = this.WeightCalculation.bind(this);
@@ -1076,17 +1033,24 @@ class Profile extends Component {
   WeightCalculation() {
     if (this.state.currentWeight > 0) {
       return (
-        <div id="rcorners3">
+        <div class="card-header">
+            <div class="card-body">
           <h3>Your Current weight is:</h3>
           <div>{this.state.currentWeight} KG</div>
-        </div>
+          <div>{this.weightLossGoal()}</div>
+          </div>
+        </div> 
       );
     } else {
       return (
-        <div id="rcorners3">
+       
+            <div class="card-header">
+            <div class="card-body">
           <h3>Your Current weight is:</h3>
           <div>Please enter weight in goals section</div>
-        </div>
+          <div>{this.weightLossGoal()}</div>
+          </div>
+        </div> 
       );
     }
   } //CHRIS
@@ -1128,18 +1092,24 @@ class Profile extends Component {
     let avgCals = Math.round(totalCal / 7);
     if (this.state.caloriesUser.length === 0) {
       return (
-        <div>
+        <div class="card-header">
+        <div class="card-body">  
           <h3>Your weekly Calories from meals:</h3>
           <div>Please add food items to Weekly Planner</div>
+        </div>
         </div>
       );
     } else {
       return (
-        <div>
+
+
+        <div class="card-header">
+        <div class="card-body">  
           <h3>Your weekly Calories from meals:</h3>
           <div>{totalCal} KCAL/Calories</div>
           <h3>Your average Daily calories from meals:</h3>
           <div>{avgCals} KCAL/Calories</div>
+          </div>
         </div>
       );
     }
@@ -1160,7 +1130,8 @@ class Profile extends Component {
       if (avgCals > avgCalsDaily) {
         let caloriesOver = Math.round(avgCals - avgCalsDaily);
         return (
-          <div>
+            <div class="card-header">
+            <div class="card-body">  
             <h3>Daily Calories & Weekly Calories:</h3>
             <div>
               You have gone over your set daily calorie limit by {caloriesOver}{" "}
@@ -1169,27 +1140,34 @@ class Profile extends Component {
             <div>
               Or, {caloriesOver * 7} Calories over the limit for the week
             </div>
+            <div>{this.weightLossStats2()}</div>
+          </div>
           </div>
         );
       }
       if (avgCals < avgCalsDaily) {
         let caloriesLeft = Math.round(avgCalsDaily - avgCals);
         return (
-          <div>
+            <div class="card-header">
+            <div class="card-body">  
             <h3>Daily Calories & Weekly Calories:</h3>
             <div>
               You have {caloriesLeft} Calories left to use for each day!
             </div>
             <div>Or, {caloriesLeft * 7} Calories left for the week</div>
-            <div></div>
+            <div>{this.weightLossStats2()}</div>
+          </div>
           </div>
         );
       }
     } else {
       return (
-        <div>
+          <div class="card-header">
+          <div class="card-body"> 
           <h3>Daily Calories & Weekly Calories:</h3>
           <div>Please enter calories in goals & add food to weekly planner</div>
+          <div>{this.weightLossStats2()}</div>
+        </div>
         </div>
       );
     }
@@ -1280,146 +1258,152 @@ class Profile extends Component {
           <tbody>
             <tr>
               <td colSpan="3">
-                <div className={this.state.tabStatus[0] ? "tabDiv" : "hide"}>
-                  <form>
+                <div className={this.state.tabStatus[0] ? "tabDiv" : "hide"}id="goalsContainer">
+                <div class="card text-white bg-success mb-3" id="goalsContainer">
+                <form>
+                <br />
                     <div className="form-group">
-                      <label className="col-md-4 control-label" for="textinput">
-                        Calories Per Day
-                      </label>
-                      <div className="col-md-4">
+                    <h3>
+                        Please Input Daily Calorie Intake
+                    </h3>
+                    <div className="col-md-4">
                         <input
-                          id="textinput"
-                          name="textinput"
-                          type="text"
-                          placeholder="Calorie intake per day"
-                          className="form-control input-md"
-                          value={this.state.caloriesPerDay}
-                          onChange={this.handleChangeCaloriesPerDayBox}
+                        id="textinput"
+                        name="textinput"
+                        type="text"
+                        placeholder="Calorie intake per day"
+                        className="form-control input-sm"
+                        value={this.state.caloriesPerDay}
+                        onChange={this.handleChangeCaloriesPerDayBox}
                         />
-                      </div>
                     </div>
+                    </div>
+                    <br />
                     <button
-                      disabled={
+                    disabled={
                         !(
-                          this.state.formValidCaloriesPerDay &&
-                          this.state.isCaloriesPerDaySubmitted
+                        this.state.formValidCaloriesPerDay &&
+                        this.state.isCaloriesPerDaySubmitted
                         )
-                      }
-                      onClick={this.submitCaloriesPerDayClick}
-                      type="button"
-                      className="btn btn-warning btn-lg"
+                    }
+                    onClick={this.submitCaloriesPerDayClick}
+                    type="button"
+                    className="btn btn-primary"
                     >
-                      Submit Details
+                    Submit Details
                     </button>
                     <ValidationCaloriesPerDay
-                      formErrorsCaloriesPerDay={
+                    formErrorsCaloriesPerDay={
                         this.state.formErrorsCaloriesPerDay
-                      }
+                    }
                     />
-                  </form>
-                  <form>
+                    </form>
+
+                    <form>
                     <div className="form-group">
-                      <label className="col-md-4 control-label" for="textinput">
-                        Current weight
-                      </label>
-                      <div className="col-md-4">
+                    <h3>
+                        Please Input Current Weight
+                    </h3>
+                    <div className="col-md-4">
                         <input
-                          id="textinput"
-                          name="textinput"
-                          type="text"
-                          placeholder="Current weight in kg"
-                          className="form-control input-md"
-                          value={this.state.currentWeight}
-                          onChange={this.handleChangeCurrentWeightBox}
+                        id="textinput"
+                        name="textinput"
+                        type="text"
+                        placeholder="Current weight in kg"
+                        className="form-control input-md"
+                        value={this.state.currentWeight}
+                        onChange={this.handleChangeCurrentWeightBox}
                         />
-                      </div>
+                    </div>
                     </div>
                     <button
-                      disabled={
+                    disabled={
                         !(
-                          this.state.formValidCurrentWeight &&
-                          this.state.isCurrentWeightSubmitted
+                        this.state.formValidCurrentWeight &&
+                        this.state.isCurrentWeightSubmitted
                         )
-                      }
-                      onClick={this.submitCurrentWeightClick}
-                      type="button"
-                      className="btn btn-warning btn-lg"
+                    }
+                    onClick={this.submitCurrentWeightClick}
+                    type="button"
+                    className="btn btn-primary"
                     >
-                      Submit Details
+                    Submit Details
                     </button>
-                  </form>
-                  <ValidationCurrentWeight
+                    </form>
+                    <ValidationCurrentWeight
                     formErrorsCurrentWeight={this.state.formErrorsCurrentWeight}
-                  />
+                    />
 
-                  <form>
+                    <form>
                     <div className="form-group">
-                      <label className="col-md-4 control-label" for="textinput">
-                        Ideal Weight
-                      </label>
-                      <div className="col-md-4">
+                    <h3>
+                        Please Input  Weight
+                    </h3>
+                    <div className="col-md-4">
                         <input
-                          id="textinput"
-                          name="textinput"
-                          type="text"
-                          placeholder="Ideal weight in kg"
-                          className="form-control input-md"
-                          value={this.state.idealWeight}
-                          onChange={this.handleChangeIdealWeightBox}
+                        id="textinput"
+                        name="textinput"
+                        type="text"
+                        placeholder="Ideal weight in kg"
+                        className="form-control input-md"
+                        value={this.state.idealWeight}
+                        onChange={this.handleChangeIdealWeightBox}
                         />
-                      </div>
+                    </div>
                     </div>
                     <button
-                      disabled={
+                    disabled={
                         !(
-                          this.state.formValidIdealWeight &&
-                          this.state.isIdealWeightSubmitted
+                        this.state.formValidIdealWeight &&
+                        this.state.isIdealWeightSubmitted
                         )
-                      }
-                      onClick={this.submitIdealWeightClick}
-                      type="button"
-                      className="btn btn-warning btn-lg"
+                    }
+                    onClick={this.submitIdealWeightClick}
+                    type="button"
+                    className="btn btn-primary"
                     >
-                      Submit Details
+                    Submit Details
                     </button>
-                  </form>
-                  <ValidationIdealWeight
+                    </form>
+                    <ValidationIdealWeight
                     formErrorsIdealWeight={this.state.formErrorsIdealWeight}
-                  />
-                </div>
+                    />
+                  </div>
+                  </div>
 
-                <div className={this.state.tabStatus[1] ? "tabDiv" : "hide"}>
+                <div className={this.state.tabStatus[1] ? "tabDiv" : "hide"} id="goalsContainer">
                   <body>
-                    <div>
+                    <div class="card text-white bg-success mb-3" id="goalsContainer">
                       <h2>Calorie Breakdown:</h2>
                       {this.mealPlanner()}
                     </div>
-                    <div>
+                    <div class="card text-white bg-primary mb-3" id="goalsContainer">
                       <h2>Weight Statistics:</h2>
                       {this.WeightCalculation()}
-                      {this.weightLossGoal()}
                     </div>
-                    <div>
+                    <div class="card text-white bg-dark mb-3" id="goalsContainer">
                       <h2>Weight Loss in numbers</h2>
                       {this.weightLossStats()}
-                      {this.weightLossStats2()}
                     </div>
                   </body>
                 </div>
 
-                <div className={this.state.tabStatus[2] ? "tabDiv" : "hide"}>
-                  <div className="App">
-                    <form></form>
+                <div className={this.state.tabStatus[2] ? "tabDiv" : "hide"} id="goalsContainer">
+                  
+                <div class="card text-white bg-success mb-3">
+                <div class="card text-white bg-secondary mb-3">
+                
                     Hey there! Want to eat more and stay in shape? Exercise is a
                     no-brainer! See how many calories you can burn for various
                     daily exercises at different levels of intensity. Just fill
                     in the details and click your level. See what's truly
                     required to work off 500 calories. It might be more than you
                     think!
+                    </div>
                     <form>
                       <div className="form-group">
                         <label>
-                          <strong className="text-success mb-2">
+                          <strong>
                             Minutes Cycling:
                           </strong>
                           <input
@@ -1427,6 +1411,7 @@ class Profile extends Component {
                             value={this.state.numberOfMinutesCycling}
                             name="getDist"
                             onChange={this.handleChangeCyclingTimeBox}
+                            className="form-control input-md"
                           />
                         </label>
                         <br />
@@ -1484,7 +1469,7 @@ class Profile extends Component {
                     <form>
                       <div className="form-group">
                         <label>
-                          <strong className="text-success mb-2">
+                          <strong>
                             Minutes Walking:
                           </strong>
                           <input
@@ -1492,6 +1477,7 @@ class Profile extends Component {
                             value={this.state.numberOfMinutesWalking}
                             name="getDist"
                             onChange={this.handleChangeWalkingTimeBox}
+                            className="form-control input-md"
                           />
                         </label>
                         <br />
@@ -1549,7 +1535,7 @@ class Profile extends Component {
                     <form>
                       <div className="form-group">
                         <label>
-                          <strong className="text-success mb-2">
+                          <strong>
                             Minutes Running:
                           </strong>
                           <input
@@ -1557,6 +1543,7 @@ class Profile extends Component {
                             value={this.state.numberOfMinutesRunning}
                             name="getDist"
                             onChange={this.handleChangeRunningTimeBox}
+                            className="form-control input-md"
                           />
                         </label>
                         <br />
@@ -1614,7 +1601,7 @@ class Profile extends Component {
                     <form>
                       <div className="form-group">
                         <label>
-                          <strong className="text-success mb-2">
+                          <strong>
                             Minutes Rowing:
                           </strong>
                           <input
@@ -1622,6 +1609,7 @@ class Profile extends Component {
                             value={this.state.numberOfMinutesRowing}
                             name="getDist"
                             onChange={this.handleChangeRowingTimeBox}
+                            className="form-control input-md"
                           />
                         </label>
                         <br />
@@ -1677,7 +1665,7 @@ class Profile extends Component {
                       <br />
                       <div className="form-group">
                         <label>
-                          <strong className="text-success mb-2">
+                          <strong>
                             Minutes Team Sport:
                           </strong>
                           <input
@@ -1685,6 +1673,7 @@ class Profile extends Component {
                             value={this.state.numberOfMinutesTeamSport}
                             name="getDist"
                             onChange={this.handleChangeTeamSportTimeBox}
+                            className="form-control input-md"
                           />
                         </label>
                         <br />
@@ -1712,7 +1701,7 @@ class Profile extends Component {
                       <br />
                       <div className="form-group">
                         <label>
-                          <strong className="text-success mb-2">
+                          <strong>
                             Minutes Weight Lifting:
                           </strong>
                           <input
@@ -1720,6 +1709,7 @@ class Profile extends Component {
                             value={this.state.numberOfMinutesWeightLifting}
                             name="getDist"
                             onChange={this.handleChangeWeightLiftingTimeBox}
+                            className="form-control input-md"
                           />
                         </label>
                         <br />
@@ -1750,6 +1740,8 @@ class Profile extends Component {
                         type="text"
                         name="removeFood"
                         onChange={this.onDeleteFormChange}
+                        className="form-control input-md"
+                        
                       />
                     </form>
                     <button

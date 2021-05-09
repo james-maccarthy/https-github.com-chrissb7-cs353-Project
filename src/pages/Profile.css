@@ -30,3 +30,9 @@
     background-color: rgba(79, 129, 129, 0.9);
     color: white;
 }
+
+#goalsContainer{
+padding-left: 5%;
+padding-top: 5%;
+padding-right: 5%;
+}
