@@ -2,8 +2,9 @@ import React, { Component } from "react";
 //import $ from "jquery";
 import ValidationGrams from "./ValidationGrams";
 import { basicFoodArray } from "../../jsonData/BasicFoodTypeJSON_Update";
-import foodSelected from "../../jsonData/localData2.json";
+import foodSelected from "../../jsonData/localData.json";
 import firebase from "firebase/app";
+import $ from "jquery";
 // various imports, see corresponding .js files
 //comment
 class App extends Component {
@@ -169,7 +170,7 @@ class App extends Component {
     var foundIt;
     var foodChosen;
     var i;
-    var cal;
+    var calorie;
     var myArray = this.state.foodArray;
     for (i = 0; i < myArray.length; i++) {
       if (
@@ -180,7 +181,7 @@ class App extends Component {
         foundIt = true;
         myArray[i][1] = this.state.weightInGrams;
         myArray[i][3] = (myArray[i][1] * myArray[i][2]) / 100;
-        cal = Math.round(myArray[i][3]);
+        calorie = Math.round(myArray[i][3]);
         foodChosen = [
           [myArray[i][0], myArray[i][1], myArray[i][2], myArray[i][3]]
         ];
@@ -191,12 +192,21 @@ class App extends Component {
         });
 
         var uid = firebase.auth().currentUser.uid;
-        var food = this.state.foodChoice;
-        foodSelected.push({ uid: uid, cals: cal, food: food });
-        console.log("food is " + food);
-        console.log("uid is " + uid);
-        console.log("cal is " + cal);
+        var name = this.state.foodChoice;
+        var day = $("select[name='day']").val();
+        var mealTime = "Snack";
+        var gram = 0;
 
+        foodSelected.push({
+          uid: uid,
+          day: day,
+          mealTime: mealTime,
+          meal: { name: name, calorie: calorie, gram: gram }
+        });
+        console.log("food is " + name);
+        console.log("uid is " + uid);
+        console.log("cal is " + calorie);
+        //{uid:"PtnCdE1n9SYEbVxfhNS1dn7QIbD3",day:"Monday",mealTime:"Snack",meal:{name:"some name",calorie:"500",gram:"serving"}}
         break;
       }
     }
@@ -322,6 +332,18 @@ class App extends Component {
         <ValidationGrams
           formErrorsGramsValid={this.state.formErrorsGramsValid}
         />
+        <label>
+          Choose a day:
+          <select name="day">
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+          </select>
+        </label>
         <br />
         <form>
           <b>Delete item: </b>
