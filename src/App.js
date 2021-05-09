@@ -5,6 +5,7 @@ import DietPlanner from "./pages/DietPlanner";
 import Menu from "./pages/Menu";
 import Profile from "./pages/Profile";
 import Login from "./components/login/login";
+import 'bootstrap/dist/css/bootstrap.min.css';
 // import stylesheets
 import './App.css';
 
