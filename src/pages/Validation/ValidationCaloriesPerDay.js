@@ -7,7 +7,7 @@ class ValidationCaloriesPerDay extends Component {
     // and return the error it contains.
     const formErrorsLocal = this.props.formErrorsCaloriesPerDay;
     return (
-      <div className="container-fluid" id="goalsContainer">
+      <div className="container-fluid">
         <div className="alert alert-warning">
           <strong>{formErrorsLocal.caloriesPerDay}</strong>
         </div>

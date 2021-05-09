@@ -7,7 +7,7 @@ class ValidationCycling extends Component {
     // and return the error it contains.
     const formErrorsLocal = this.props.formErrorsMinutesCycling;
     return (
-      <div className="container-fluid" id="goalsContainer">
+      <div className="container-fluid">
         <div className="alert alert-warning">
           <strong>{formErrorsLocal.numberOfMinutesCycling}</strong>
         </div>
