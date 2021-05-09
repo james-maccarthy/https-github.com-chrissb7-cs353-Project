@@ -36,7 +36,7 @@
     transition: all 0.1s ease;
 }
 
-.boxes {
+.box {
     width: 90%;
     margin: 0 5%;
     transition: height 0.5s ease;
@@ -44,7 +44,7 @@
     overflow: hidden;
 }
 
-.boxes-active {
+.box-active {
     width: 90%;
     margin: 0 5%;
     transition: height 0.5s ease;

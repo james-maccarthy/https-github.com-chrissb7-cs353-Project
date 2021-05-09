@@ -45,7 +45,7 @@ class Menu extends Component {
             {cuisine.Breakfast.map((meal, index) => {
                 return <div key={index} className="meal" name="Breakfast">
                     <p>{meal.name}</p>
-                    <p><span className="calorie">{meal.calorie}</span> <span className="gram">{meal.gram}</span></p>
+                    <p><span className="calorie">{meal.calorie}</span>kcal <span className="gram">{meal.gram}</span></p>
                     <button type="button" onClick={this.addButtonClick.bind(this)}>+</button>
                 </div>
             })}
@@ -53,7 +53,7 @@ class Menu extends Component {
             {cuisine.Lunch.map((meal, index) => {
                 return <div key={index} className="meal" name="Lunch">
                     <p>{meal.name}</p>
-                    <p><span className="calorie">{meal.calorie}</span> <span className="gram">{meal.gram}</span></p>
+                    <p><span className="calorie">{meal.calorie}</span>kcal <span className="gram">{meal.gram}</span></p>
                     <button type="button" onClick={this.addButtonClick.bind(this)}>+</button>
                 </div>
             })}
@@ -61,7 +61,7 @@ class Menu extends Component {
             {cuisine.Dinner.map((meal, index) => {
                 return <div key={index} className="meal" name="Dinner">
                     <p>{meal.name}</p>
-                    <p><span className="calorie">{meal.calorie}</span> <span className="gram">{meal.gram}</span></p>
+                    <p><span className="calorie">{meal.calorie}</span>kcal <span className="gram">{meal.gram}</span></p>
                     <button type="button" onClick={this.addButtonClick.bind(this)}>+</button>
                 </div>
             })}
@@ -101,21 +101,21 @@ class Menu extends Component {
                     <p className="cuisine">Europe</p>
                     <img src={arrow} className={this.state.menuStatus[0] ? "arrow-active" : "arrow"} alt=""/>
                 </div>
-                <div className={this.state.menuStatus[0] ? "boxes-active" : "boxes"}>
+                <div className={this.state.menuStatus[0] ? "box-active" : "box"}>
                     {this.renderMeals("Europe")}
                 </div>
                 <div className="menus" onClick={this.menuClick.bind(this, 1)}>
                     <p className="cuisine">North America</p>
                     <img src={arrow} className={this.state.menuStatus[1] ? "arrow-active" : "arrow"} alt=""/>
                 </div>
-                <div className={this.state.menuStatus[1] ? "boxes-active" : "boxes"}>
+                <div className={this.state.menuStatus[1] ? "box-active" : "box"}>
                     {this.renderMeals("North America")}
                 </div>
                 <div className="menus" onClick={this.menuClick.bind(this, 2)}>
                     <p className="cuisine">Asia</p>
                     <img src={arrow} className={this.state.menuStatus[2] ? "arrow-active" : "arrow"} alt=""/>
                 </div>
-                <div className={this.state.menuStatus[2] ? "boxes-active" : "boxes"}>
+                <div className={this.state.menuStatus[2] ? "box-active" : "box"}>
                     {this.renderMeals("Asia")}
                 </div>
                 <div id="daySelector">

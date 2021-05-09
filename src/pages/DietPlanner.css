@@ -1,3 +1,6 @@
+:root {
+    --box-height: 30vh;
+}
 .daySelector {
     background-color: #466b6b;
     width: 98%;
@@ -17,7 +20,8 @@
     width: 80%;
     margin: 0 10%;
     transition: height 0.5s ease;
-    height: 43vh;
+    /*height: 10vh;*/
+    height: var(--box-height);
 }
 
 .days {
@@ -99,4 +103,25 @@
 .tabs thead div {
     background-color: rgba(79, 129, 129, 0.9);
     color: white;
+}
+.food {
+    width: 98%;
+    height: 6vh;
+    margin: 0.25vh 1%;
+}
+
+.food p {
+    float: left;
+    font-family: monospace;
+    font-size: 1vh;
+    font-weight: bold;
+    margin: 0 0 0 2%;
+    line-height: 3vh;
+    width: 90%;
+    text-align: left;
+}
+.food p:last-of-type {
+    padding-left: 5%;
+    width: 70%;
+    color: grey;
 }
