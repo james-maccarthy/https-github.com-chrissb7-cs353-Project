@@ -300,7 +300,6 @@ class App extends Component {
             <div>
                 <br/>
                 <hr/>
-                <div class="card border-dark mb-3" id="caloriesContainer">
                     <form>
                         <b>Type your food search here: </b>
 
@@ -377,7 +376,7 @@ class App extends Component {
                     <br/>
                     <br/>
                     {this.state.chosenFoods.map((b, index) => (
-                        <option key={index}>
+                        <div key={index}>
                             {this.state.chosenFoods[index][0] +
                             ", " +
                             this.state.chosenFoods[index][1] +
@@ -386,28 +385,11 @@ class App extends Component {
                             " calories per 100 grams, " +
                             this.state.chosenFoods[index][3] +
                             " calories"}
-                        </option>
+                        </div>
                     ))}
                     <br/>
-                    {/* Your calorie intake is {Math.round(this.state.caloriesConsumed)}{" "}
-        calories.
-        <hr />
-        {this.state.caloriesConsumed > this.state.caloriesLeft && (
-          <p>
-            You have exceeded your daily calorie intake by{" "}
-            {Math.round(this.state.caloriesConsumed - this.state.caloriesLeft)}{" "}
-            calories
-          </p>
-        )}
-        {this.state.caloriesLeft >= this.state.caloriesConsumed && (
-          <p>
-            You can eat{" "}
-            {this.state.caloriesLeft - Math.round(this.state.caloriesConsumed)}{" "}
-            more calories to achieve your recommended daily calorie intake.
-          </p>
-        )} */}
                 </div>
-            </div>
+            
         );
     };
 }
