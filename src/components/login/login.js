@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Firebase from "../databaseConfig/firebaseConfig";
 import "./login.css";
 import $ from "jquery";
+import logo from "../../img/logo.ico";
 
 class Login extends Component {
     constructor(props) {
@@ -73,7 +74,7 @@ class Login extends Component {
                             <strong>ERROR: {error.message} </strong>
                         </p>
                     )}
-                    <p id="temp">need a logo and App name</p>
+                    <img id="logo" src={logo}/>
                     <form onSubmit={this.handleLoginSubmit}>
                         <input name="email" type="email" required="required" placeholder="email" value={email}
                                onChange={handleInput}/>

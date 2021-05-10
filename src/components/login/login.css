@@ -11,17 +11,16 @@
     position: relative;
     width: 300px;
     height: 250px;
-    top: 50%;
+    top: 58%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-#temp {
-    position: relative;
-    top: 15%;
+#logo {
+    position: absolute;
+    top: 25%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(-20deg);
-    width: 80vw;
+    transform: translate(-50%, -50%);
 }
 
 #login input {
