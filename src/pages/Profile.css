@@ -31,13 +31,6 @@
     color: white;
 }
 
-
-
-
-#goalsContainer2> * {
-    margin: 10px 0;
-}
-
 #exerciseContainer{
     padding-left: 5%;
     padding-top: 5%;
@@ -47,7 +40,7 @@
 
     #goalsContainer{
         padding-top: 5%;
-    padding-bottom: 5%;
+        padding-bottom: 5%;
         padding-left: 5%;
         padding-right: 5%;
         }
