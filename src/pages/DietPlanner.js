@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 // import components
-
 // import stylesheets
 import arrow from "../img/arrow.png";
 import defaultPhoto from "../img/photo.jpg";

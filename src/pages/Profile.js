@@ -1178,12 +1178,12 @@ class Profile extends Component {
     let idealWeight = this.state.idealWeight;
     let weightGoal = currentWeight - idealWeight;
     let burnCalsdaily = 2500 - this.state.caloriesPerDay;
+    var idealWeightCals = Math.round(weightGoal * 7700);
     if (
       this.state.currentWeight > 0 &&
       this.state.idealWeight > 0 &&
       this.state.caloriesPerDay > 0
     ) {
-      var idealWeightCals = Math.round(weightGoal * 7700);
       var days = Math.round(idealWeightCals / burnCalsdaily);
       return (
         <div>
@@ -1392,18 +1392,24 @@ class Profile extends Component {
 
                 <div className={this.state.tabStatus[2] ? "tabDiv" : "hide"} id="goalsContainer">
                   
-                <div class="card text-white bg-success mb-3">
-                <div class="card text-white bg-secondary mb-3">
+                <div class="card" id="exerciseCard">
+                    
                 
+        <div class="card-header bg-light mb-3" id="exerciseP"><h3>Exercise Activity Checker</h3></div>        
+                <p id="exerciseP">
                     Hey there! Want to eat more and stay in shape? Exercise is a
                     no-brainer! See how many calories you can burn for various
-                    daily exercises at different levels of intensity. Just fill
-                    in the details and click your level. See what's truly
+                    daily exercises at different levels of intensity. 
+                    <br></br>
+                    <br></br>
+                    Just fill in the details and click your level. See what's truly
                     required to work off 500 calories. It might be more than you
-                    think!
+                    think!</p>
                     </div>
+                    <br />
+                    <div class="card border-secondary mb-3"  id="exerciseCard2"> 
                     <form>
-                      <div className="form-group">
+                      <div className="col-md-4" id="goalsContainer">
                         <label>
                           <strong>
                             Minutes Cycling:
@@ -1419,7 +1425,7 @@ class Profile extends Component {
                         <br />
                       </div>
                     </form>
-                    <div>
+                    <div id = "goalsContainer">
                       <button
                         onClick={() =>
                           this.handleCyclingActivityLevelLowClick()
@@ -1457,7 +1463,7 @@ class Profile extends Component {
                         }
                         onClick={this.submitMinutesCyclingClick}
                         type="button"
-                        className="btn btn-warning btn-lg"
+                        className="btn btn-primary"
                       >
                         Submit Details
                       </button>
@@ -1485,7 +1491,7 @@ class Profile extends Component {
                         <br />
                       </div>
                     </form>
-                    <div>
+                    <div id = "goalsContainer">
                       <button
                         onClick={() =>
                           this.handleWalkingActivityLevelLowClick()
@@ -1523,7 +1529,7 @@ class Profile extends Component {
                         }
                         onClick={this.submitMinutesWalkingClick}
                         type="button"
-                        className="btn btn-warning btn-lg"
+                        className="btn btn-primary"
                       >
                         Submit Details
                       </button>
@@ -1551,8 +1557,9 @@ class Profile extends Component {
                         <br />
                       </div>
                     </form>
-                    <div>
+                    <div id = "goalsContainer">
                       <button
+                      
                         onClick={() =>
                           this.handleRunningActivityLevelLowClick()
                         }
@@ -1561,6 +1568,7 @@ class Profile extends Component {
                         Low{" "}
                       </button>
                       <button
+                      
                         onClick={() =>
                           this.handleRunningActivityLevelModerateClick()
                         }
@@ -1569,6 +1577,7 @@ class Profile extends Component {
                         Moderate{" "}
                       </button>
                       <button
+                      
                         onClick={() =>
                           this.handleRunningActivityLevelHighClick()
                         }
@@ -1589,7 +1598,7 @@ class Profile extends Component {
                         }
                         onClick={this.submitMinutesRunningClick}
                         type="button"
-                        className="btn btn-warning btn-lg"
+                        className="btn btn-primary"
                       >
                         Submit Details
                       </button>
@@ -1617,7 +1626,7 @@ class Profile extends Component {
                         <br />
                       </div>
                     </form>
-                    <div>
+                    <div id = "goalsContainer">
                       <button
                         onClick={() => this.handleRowingActivityLevelLowClick()}
                       >
@@ -1653,7 +1662,7 @@ class Profile extends Component {
                         }
                         onClick={this.submitMinutesRowingClick}
                         type="button"
-                        className="btn btn-warning btn-lg"
+                        className="btn btn-primary"
                       >
                         Submit Details
                       </button>
@@ -1665,7 +1674,7 @@ class Profile extends Component {
                     />
                     <form>
                       <br />
-                      <div className="form-group">
+                      <div className="form-group" id = "goalsContainer">
                         <label>
                           <strong>
                             Minutes Team Sport:
@@ -1681,7 +1690,7 @@ class Profile extends Component {
                         <br />
                       </div>
                     </form>
-                    <button
+                    <div id="goalsContainer"><button
                       disabled={
                         !(
                           this.state.formValidMinutesTeamSport &&
@@ -1690,10 +1699,11 @@ class Profile extends Component {
                       }
                       onClick={this.submitMinutesTeamSportClick}
                       type="button"
-                      className="btn btn-warning btn-lg"
+                      className="btn btn-primary"
                     >
                       Submit Details
                     </button>
+                    </div>
                     <ValidationTeamSport
                       formErrorsMinutesTeamSport={
                         this.state.formErrorsMinutesTeamSport
@@ -1717,7 +1727,8 @@ class Profile extends Component {
                         <br />
                       </div>
                     </form>
-                    <button
+                    <div id="goalsContainer">
+                        <button
                       disabled={
                         !(
                           this.state.formValidMinutesWeightLifting &&
@@ -1726,16 +1737,18 @@ class Profile extends Component {
                       }
                       onClick={this.submitMinutesWeightLiftingClick}
                       type="button"
-                      className="btn btn-warning btn-lg"
+                      className="btn btn-primary"
                     >
                       Submit Details
                     </button>
+                    </div>
                     <ValidationWeightLifting
                       formErrorsMinutesWeightLifting={
                         this.state.formErrorsMinutesWeightLifting
                       }
                     />
                     <form>
+                        <div id= "goalsContainer">
                       <br />
                       <b>Delete item: </b>
                       <input
@@ -1745,20 +1758,22 @@ class Profile extends Component {
                         className="form-control input-md"
                         
                       />
+                      </div>
                     </form>
+                    <div id="goalsContainer">
                     <button
                       disabled={!this.state.validActivity}
                       onClick={this.deleteActivityType}
                       type="button"
-                      className="Ciaran"
+                      className="btn btn-primary"
                     >
                       Submit Details
                     </button>
-                    <br />
-                    <br />
-                    Your choices
-                    <br />
-                    <br />
+                    </div>
+                    </div>
+
+                <div className="card text-white bg-success mb-3" id="goalsContainer" > 
+                <div class="card-header bg-secondary mb-3" id="exerciseP">Your choices</div> 
                     {this.state.activityArray.map((b, index) => (
                       <option key={index}>
                         {this.state.activityArray[index][0] +
@@ -1776,8 +1791,8 @@ class Profile extends Component {
                     RDA is {this.state.caloriesLeft} calories
                     <br />
                     <br />
+                    </div>  
                   </div>
-                </div>
               </td>
             </tr>
           </tbody>

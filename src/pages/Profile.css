@@ -31,8 +31,44 @@
     color: white;
 }
 
-#goalsContainer{
-padding-left: 5%;
-padding-top: 5%;
-padding-right: 5%;
+
+
+
+#goalsContainer2> * {
+    margin: 10px 0;
+}
+
+#exerciseContainer{
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+    }
+
+    #goalsContainer{
+        padding-top: 5%;
+    padding-bottom: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+        }
+
+#exerciseCard{
+
+    background-color:#CAE7DF;
+    width: 80%;
+    left: 12%;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-right: 5%;
+
+}
+
+.exerciseButton{
+    margin: 50px;
+}
+
+#exerciseP{
+    font-family: "Helvetica Neue";
+    line-height: 150%;
+    font-weight: 800;
 }
