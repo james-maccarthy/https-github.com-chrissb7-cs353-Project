@@ -60,7 +60,7 @@ class Login extends Component {
     }
 
     showSignUp() {
-        $("#signUp").show();
+        $("#signUp").toggle();
     }
 
     render() {
@@ -74,7 +74,7 @@ class Login extends Component {
                             <strong>ERROR: {error.message} </strong>
                         </p>
                     )}
-                    <img id="logo" src={logo}/>
+                    <img className="logo" src={logo}/>
                     <form onSubmit={this.handleLoginSubmit}>
                         <input name="email" type="email" required="required" placeholder="email" value={email}
                                onChange={handleInput}/>
@@ -87,6 +87,7 @@ class Login extends Component {
                     </form>
                 </div>
                 <div id="signUp">
+                    <img className="logo" src={logo}/>
                     <form onSubmit={this.handleSignUpSubmit}>
                         <input name="email" type="email" required="required" placeholder="Email" value={email}
                         onChange={handleInput}/>
@@ -96,6 +97,7 @@ class Login extends Component {
                         <input name="confirm" type="password" required="required" placeholder="Confirm Password"/>
                         <p id="tip"><strong>password in two field must be same!</strong></p>
                         <button type="submit">submit</button>
+                        <button type="button" onClick={this.showSignUp}>cancle</button>
                     </form>
                 </div>
             </div>

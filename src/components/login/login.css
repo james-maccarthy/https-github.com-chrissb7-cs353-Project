@@ -16,7 +16,7 @@
     transform: translate(-50%, -50%);
 }
 
-#logo {
+.logo {
     position: absolute;
     top: 25%;
     left: 50%;
@@ -67,7 +67,7 @@
     position: relative;
     width: 300px;
     height: 300px;
-    top: 50%;
+    top: 54%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
