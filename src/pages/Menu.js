@@ -58,7 +58,7 @@ class Menu extends Component {
                                 <span className="calorie">{meal.calorie}</span>kcal{" "}
                                 <span className="gram">{meal.gram}</span>
                             </p>
-                            <button type="button" className="btn btn-primary" onClick={this.addButtonClick.bind(this)}>
+                            <button type="button" id="buttonMenu" className="btn btn-primary" onClick={this.addButtonClick.bind(this)}>
                                 +
                             </button>
                         </div>
@@ -75,7 +75,7 @@ class Menu extends Component {
                                 <span className="calorie">{meal.calorie}</span>kcal{" "}
                                 <span className="gram">{meal.gram}</span>
                             </p>
-                            <button type="button" className="btn btn-primary" onClick={this.addButtonClick.bind(this)}>
+                            <button type="button" id="buttonMenu" className="btn btn-primary" onClick={this.addButtonClick.bind(this)}>
                                 +
                             </button>
                         </div>
@@ -92,7 +92,7 @@ class Menu extends Component {
                                 <span className="calorie">{meal.calorie}</span>kcal{" "}
                                 <span className="gram">{meal.gram}</span>
                             </p>
-                            <button type="button" className="btn btn-primary" onClick={this.addButtonClick.bind(this)}>
+                            <button type="button" id="buttonMenu" className="btn btn-primary" onClick={this.addButtonClick.bind(this)}>
                                 +
                             </button>
                         </div>
