@@ -113,7 +113,7 @@
 .food p {
     float: left;
     font-family: monospace;
-    font-size: 1vh;
+    font-size: 2vh;
     font-weight: bold;
     margin: 0 0 0 2%;
     line-height: 3vh;
