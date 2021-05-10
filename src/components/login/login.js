@@ -96,8 +96,8 @@ class Login extends Component {
                         onChange={handleInput}/>
                         <input name="confirm" type="password" required="required" placeholder="Confirm Password"/>
                         <p id="tip"><strong>password in two field must be same!</strong></p>
-                        <button type="submit">submit</button>
-                        <button type="button" onClick={this.showSignUp}>cancle</button>
+                        <button type="submit">Submit</button>
+                        <button type="button" onClick={this.showSignUp}>Cancel</button>
                     </form>
                 </div>
             </div>

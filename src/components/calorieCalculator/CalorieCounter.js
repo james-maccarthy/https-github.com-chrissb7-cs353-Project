@@ -383,7 +383,7 @@ class App extends Component {
           </option>
         ))}
         <br />
-        Your calorie intake is {Math.round(this.state.caloriesConsumed)}{" "}
+        {/* Your calorie intake is {Math.round(this.state.caloriesConsumed)}{" "}
         calories.
         <hr />
         {this.state.caloriesConsumed > this.state.caloriesLeft && (
@@ -399,7 +399,7 @@ class App extends Component {
             {this.state.caloriesLeft - Math.round(this.state.caloriesConsumed)}{" "}
             more calories to achieve your recommended daily calorie intake.
           </p>
-        )}
+        )} */}
       </div>
     );
   };

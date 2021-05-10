@@ -6,7 +6,6 @@ import arrow from "../img/arrow.png";
 import defaultPhoto from "../img/photo.jpg";
 import "./DietPlanner.css";
 import userSelected from "../jsonData/localData.json";
-//import localData2 from "../jsonData/localData2.json";
 import $ from "jquery";
 import firebase from "firebase/app";
 
