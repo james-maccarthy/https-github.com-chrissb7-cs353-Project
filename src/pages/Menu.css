@@ -76,20 +76,20 @@
     height: 4vh;
     margin: 0.25vh 1%;
     font-family: monospace;
-    font-size: 3vh;
+    font-size: 3.5vh;
     font-weight: bold;
 }
 
 .meal {
     width: 98%;
-    height: 8vh;
+    height: 9vh;
     margin: 0.25vh 1%;
 }
 
 .meal p {
     float: left;
     font-family: monospace;
-    font-size: 2vh;
+    font-size: 2.7vw;
     font-weight: bold;
     margin: 0 0 0 2%;
     line-height: 4vh;

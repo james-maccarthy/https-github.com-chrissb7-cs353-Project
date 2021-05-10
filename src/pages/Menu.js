@@ -38,7 +38,7 @@ class Menu extends Component {
       (cuisine.Breakfast.length +
         cuisine.Lunch.length +
         cuisine.Dinner.length) *
-        8.3 +
+        9.3 +
       3 * 4;
     $(":root").css("--box-height", h + "vh");
   }
