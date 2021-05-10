@@ -923,11 +923,11 @@ class Profile extends Component {
       localValid = false;
       localFormErrors.caloriesPerDay =
         "Decimals? Pretty precise! Please enter a positive whole number";
-    } else if (calories.trim().length >= 5) {
-      localValid = false;
-      localFormErrors.caloriesPerDay =
-        "That's a lot of calories in one day! Please enter a number less than 10000.";
-    } else {
+    } else if (calories.trim() <= 1400 || calories.trim() >= 2500) {
+        localValid = false;
+        localFormErrors.caloriesPerDay =
+          "Please enter a number greater than 1400 and less than 2500";
+      } else {
       localValid = true;
       localFormErrors.caloriesPerDay = "Please submit your details";
     }
@@ -1040,6 +1040,7 @@ class Profile extends Component {
             <div class="card-body">
           <h3>Your Current weight is:</h3>
           <div>{this.state.currentWeight} KG</div>
+          <br/>
           <div>{this.weightLossGoal()}</div>
           </div>
         </div> 
@@ -1051,6 +1052,7 @@ class Profile extends Component {
             <div class="card-body">
           <h3>Your Current weight is:</h3>
           <div>Please enter weight in goals section</div>
+          <br/>
           <div>{this.weightLossGoal()}</div>
           </div>
         </div> 
@@ -1097,7 +1099,8 @@ class Profile extends Component {
       return (
         <div class="card-header">
         <div class="card-body">  
-          <h3>Your weekly Calories from meals:</h3>
+          <h3>Your weekly Calories from meals/snacks:</h3>
+          <br/>
           <div>Please add food items to Weekly Planner</div>
         </div>
         </div>
@@ -1108,9 +1111,10 @@ class Profile extends Component {
 
         <div class="card-header">
         <div class="card-body">  
-          <h3>Your weekly Calories from meals:</h3>
+          <h3>Your weekly Calories from meals/snacks:</h3>
           <div>{totalCal} KCAL/Calories</div>
-          <h3>Your average Daily calories from meals:</h3>
+          <br/>
+          <h3>Your average Daily calories from meals/snacks:</h3>
           <div>{avgCals} KCAL/Calories</div>
           </div>
         </div>
@@ -1387,6 +1391,7 @@ class Profile extends Component {
                       {this.WeightCalculation()}
                     </div>
                     <div class="card text-white bg-dark mb-3" >
+                    <br/>
                       <h2>Weight Loss in numbers</h2>
                       {this.weightLossStats()}
                     </div>
