@@ -1266,7 +1266,7 @@ class Profile extends Component {
                     <h3>
                         Please Input Daily Calorie Intake
                     </h3>
-                    <div className="col-md-4">
+                    <div className="col-md-4" id="goalsContainer">
                         <input
                         id="textinput"
                         name="textinput"
@@ -1304,7 +1304,7 @@ class Profile extends Component {
                     <h3>
                         Please Input Current Weight
                     </h3>
-                    <div className="col-md-4">
+                    <div className="col-md-4"id="goalsContainer">
                         <input
                         id="textinput"
                         name="textinput"
@@ -1316,6 +1316,7 @@ class Profile extends Component {
                         />
                     </div>
                     </div>
+                    <br />
                     <button
                     disabled={
                         !(
@@ -1339,7 +1340,7 @@ class Profile extends Component {
                     <h3>
                         Please Input  Weight
                     </h3>
-                    <div className="col-md-4">
+                    <div className="col-md-4" id="goalsContainer">
                         <input
                         id="textinput"
                         name="textinput"
@@ -1351,6 +1352,7 @@ class Profile extends Component {
                         />
                     </div>
                     </div>
+                    <br/>
                     <button
                     disabled={
                         !(
@@ -1381,7 +1383,7 @@ class Profile extends Component {
                       <h2>Weight Statistics:</h2>
                       {this.WeightCalculation()}
                     </div>
-                    <div class="card text-white bg-dark mb-3" id="goalsContainer">
+                    <div class="card text-white bg-dark mb-3" >
                       <h2>Weight Loss in numbers</h2>
                       {this.weightLossStats()}
                     </div>
