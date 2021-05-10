@@ -1147,11 +1147,11 @@ class Profile extends Component {
             <div>
               Or, {caloriesOver * 7} Calories over the limit for the week
             </div>
+            <br/>
             <div>{this.weightLossStats2()}</div>
           </div>
           </div>
-        );
-      }
+        );}
       if (avgCals < avgCalsDaily) {
         let caloriesLeft = Math.round(avgCalsDaily - avgCals);
         return (
@@ -1162,6 +1162,7 @@ class Profile extends Component {
               You have {caloriesLeft} Calories left to use for each day!
             </div>
             <div>Or, {caloriesLeft * 7} Calories left for the week</div>
+            <br/>
             <div>{this.weightLossStats2()}</div>
           </div>
           </div>
@@ -1173,6 +1174,7 @@ class Profile extends Component {
           <div class="card-body"> 
           <h3>Daily Calories & Weekly Calories:</h3>
           <div>Please enter calories in goals & add food to weekly planner</div>
+          <br/>
           <div>{this.weightLossStats2()}</div>
         </div>
         </div>
@@ -1198,7 +1200,7 @@ class Profile extends Component {
           <strong>Based on an average of 2500 calories per day:</strong>
           <div>
             It will take {days} days on a calorie intake of{" "}
-            {this.state.caloriesPerDay} KCAL/calories per day
+            {this.state.caloriesPerDay} KCAL/calories per day to lose {weightGoal}
           </div>
         </div>
       );
@@ -1345,7 +1347,7 @@ class Profile extends Component {
                     <form>
                     <div className="form-group">
                     <h3>
-                        Please Input  Weight
+                        Please Input Ideal Weight
                     </h3>
                     <div className="col-md-4" id="goalsContainer">
                         <input
