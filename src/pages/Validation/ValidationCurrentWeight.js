@@ -7,7 +7,7 @@ class ValidationCurrentWeight extends Component {
     // and return the error it contains.
     const formErrorsLocal = this.props.formErrorsCurrentWeight;
     return (
-      <div className="container-fluid">
+      <div className="container-fluid" id="goalsContainer">
         <div className="alert alert-warning">
           <strong>{formErrorsLocal.currentWeight}</strong>
         </div>
