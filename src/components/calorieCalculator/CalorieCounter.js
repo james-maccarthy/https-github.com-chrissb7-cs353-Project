@@ -170,7 +170,7 @@ class App extends Component {
     var foundIt;
     var foodChosen;
     var i;
-    var calorie;
+
     var myArray = this.state.foodArray;
     for (i = 0; i < myArray.length; i++) {
       if (
@@ -181,7 +181,7 @@ class App extends Component {
         foundIt = true;
         myArray[i][1] = this.state.weightInGrams;
         myArray[i][3] = (myArray[i][1] * myArray[i][2]) / 100;
-        calorie = Math.round(myArray[i][3]);
+        var calorie = Math.round(myArray[i][3]);
         foodChosen = [
           [myArray[i][0], myArray[i][1], myArray[i][2], myArray[i][3]]
         ];
@@ -195,7 +195,7 @@ class App extends Component {
         var name = this.state.foodChoice;
         var day = $("select[name='day']").val();
         var mealTime = "Snack";
-        var gram = 0;
+        var gram = this.state.weightInGrams;
 
         foodSelected.push({
           uid: uid,
