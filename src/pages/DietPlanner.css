@@ -9,16 +9,16 @@
 }
 
 .boxes {
-    width: 80%;
-    margin: 0 10%;
+    width: 90%;
+    margin: 0 5%;
     transition: height 0.5s ease;
     height: 0;
     overflow: hidden;
 }
 
 .boxes-active {
-    width: 80%;
-    margin: 0 10%;
+    width: 90%;
+    margin: 0 5%;
     transition: height 0.5s ease;
     /*height: 10vh;*/
     height: var(--box-height);
@@ -113,12 +113,13 @@
 .food p {
     float: left;
     font-family: monospace;
-    font-size: 2vh;
+    font-size: 3.5vw;
     font-weight: bold;
     margin: 0 0 0 2%;
     line-height: 3vh;
     width: 90%;
     text-align: left;
+    white-space:nowrap
 }
 .food p:last-of-type {
     padding-left: 5%;
