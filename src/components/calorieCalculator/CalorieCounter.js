@@ -5,6 +5,7 @@ import { basicFoodArray } from "../../jsonData/BasicFoodTypeJSON_Update";
 import foodSelected from "../../jsonData/localData.json";
 import firebase from "firebase/app";
 import $ from "jquery";
+import "./calorieCounter.css";
 // various imports, see corresponding .js files
 //comment
 class App extends Component {
@@ -293,9 +294,10 @@ class App extends Component {
 
   render = () => {
     return (
-      <div className="App">
+      <div>
         <br />
         <hr />
+       <div class="card border-dark mb-3" id="caloriesContainer">
         <form>
           <b>Type your food search here: </b>
 
@@ -318,7 +320,7 @@ class App extends Component {
         </form>
         <br />
         <label>
-          Choose a day:
+          <b>Choose a day: </b>
           <select name="day">
             <option value="Monday">Monday</option>
             <option value="Tuesday">Tuesday</option>
@@ -329,8 +331,7 @@ class App extends Component {
             <option value="Sunday">Sunday</option>
           </select>
         </label>
-        <br />
-        <br />
+        <div id="caloriesContainer">
         <button
           disabled={
             !(
@@ -341,10 +342,11 @@ class App extends Component {
           }
           onClick={this.submitFoodType}
           type="button"
-          className="Ciar"
+          className="btn btn-primary"
         >
           Submit Details
         </button>
+        </div>
         <ValidationGrams
           formErrorsGramsValid={this.state.formErrorsGramsValid}
         />
@@ -357,16 +359,17 @@ class App extends Component {
             onChange={this.onDeleteFormChange2}
           />
         </form>
+        <div id="caloriesContainer">
         <button
           disabled={!this.state.validFood2}
           onClick={this.deleteFoodType}
           type="button"
-          className="Ciaran"
+          className="btn btn-primary"
         >
           Submit Details
         </button>
-        <br />
-        <br />
+        </div>
+       
         Your choices
         <br />
         <br />
@@ -400,6 +403,7 @@ class App extends Component {
             more calories to achieve your recommended daily calorie intake.
           </p>
         )} */}
+        </div>
       </div>
     );
   };

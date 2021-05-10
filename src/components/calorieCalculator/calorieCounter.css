@@ -1,0 +1,13 @@
+#caloriesContainer{
+    padding-top: 5%;
+padding-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: "Helvetica Neue";
+    }
+
+    #ccF{
+        font-family: "Helvetica Neue";
+        line-height: 150%;
+        font-weight: 800;
+    }

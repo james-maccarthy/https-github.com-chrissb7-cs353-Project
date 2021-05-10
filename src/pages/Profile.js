@@ -996,7 +996,10 @@ class Profile extends Component {
     let localFormErrors = this.state.formErrorsIdealWeight;
     let localValid = this.state.idealWeightValid;
 
-    if (isNaN(kilos)) {
+    if (this.state.currentWeight <= Number(kilos)) {
+        localValid = false;
+        localFormErrors.idealWeight = "Please enter a weight lower than your current weight (you may not have entered your current weight)";
+      } else if (isNaN(kilos)) {
       localValid = false;
       localFormErrors.idealWeight = "Please enter a positive number";
     } else if (kilos.trim().length <= 0) {
