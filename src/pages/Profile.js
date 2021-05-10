@@ -984,6 +984,7 @@ class Profile extends Component {
     localFormErrors.currentWeight = "Thanks for your details";
 
     this.setState({ isCurrentWeightSubmitted: false });
+    this.validateIdealWeight(this.state.idealWeight);
   } // COR
 
   handleChangeIdealWeightBox(event) {
@@ -1004,7 +1005,7 @@ class Profile extends Component {
       localFormErrors.idealWeight = "Please enter a positive number";
     } else if (kilos.trim().length <= 0) {
       localValid = false;
-      localFormErrors.idealWeight = "No number entered";
+      localFormErrors.idealWeight = "No number entered for ideal weight";
     } else if (/^0+$/.test(kilos) || /^-/.test(kilos)) {
       localValid = false;
       localFormErrors.idealWeight = "Please enter a positive number";
@@ -1200,7 +1201,7 @@ class Profile extends Component {
           <strong>Based on an average of 2500 calories per day:</strong>
           <div>
             It will take {days} days on a calorie intake of{" "}
-            {this.state.caloriesPerDay} KCAL/calories per day to lose {weightGoal}
+            {this.state.caloriesPerDay} KCAL/calories per day to lose {weightGoal}Kg
           </div>
         </div>
       );
