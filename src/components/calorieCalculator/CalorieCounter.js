@@ -195,7 +195,7 @@ class App extends Component {
         var name = this.state.foodChoice;
         var day = $("select[name='day']").val();
         var mealTime = "Snack";
-        var gram = this.state.weightInGrams;
+        var gram = "serving";
 
         foodSelected.push({
           uid: uid,
@@ -284,6 +284,7 @@ class App extends Component {
     let currentChosenFoods = this.state.chosenFoods;
 
     currentChosenFoods.splice(i, 1);
+    foodSelected.splice(i, 1);
 
     if (foundIt === true) {
       this.setState({ chosenFoods: currentChosenFoods });
