@@ -167,8 +167,8 @@ class Menu extends Component {
                     {this.renderMeals("Asia")}
                 </div>
                 <div id="daySelector">
-                    <div onClick={this.mealSelector.bind(this)}>Monday</div>
-                    <div onClick={this.mealSelector.bind(this)}>Tuesday</div>
+                    <div onClick={this.mealSelector.bind(this)}>MONDAY</div>
+                    <div onClick={this.mealSelector.bind(this)}>TUESDAY</div>
                     <div onClick={this.mealSelector.bind(this)}>Wednesday</div>
                     <div onClick={this.mealSelector.bind(this)}>Thursday</div>
                     <div onClick={this.mealSelector.bind(this)}>Friday</div>
