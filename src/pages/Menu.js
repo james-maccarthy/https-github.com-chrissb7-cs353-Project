@@ -169,7 +169,7 @@ class Menu extends Component {
                 <div id="daySelector">
                     <div onClick={this.mealSelector.bind(this)}>MONDAY</div>
                     <div onClick={this.mealSelector.bind(this)}>TUESDAY</div>
-                    <div onClick={this.mealSelector.bind(this)}>Wednesday</div>
+                    <div onClick={this.mealSelector.bind(this)}>WEDNESDAY</div>
                     <div onClick={this.mealSelector.bind(this)}>Thursday</div>
                     <div onClick={this.mealSelector.bind(this)}>Friday</div>
                     <div onClick={this.mealSelector.bind(this)}>Saturday</div>
